@@ -1,0 +1,103 @@
+/* Styling for the certificate generator container */
+.certificate-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .certificate-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .certificate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .certificate-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .certificate-form input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+  
+  .certificate-form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .certificate-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for the certificate */
+  .certificate {
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .certificate .border {
+    border: 10px double #007bff;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .certificate h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .certificate h3, .certificate h4, .certificate p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .certificate .seal {
+    width: 100px;
+    height: 100px;
+    background-image: url('C:\Users\sneha\Downloads\online-education-app\public\images\seal.jpg'); /* Adjust the path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 1rem auto;
+  }
+  
+  .certificate .signature {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 2rem;
+    border-top: 1px solid #000;
+    width: 200px;
+    margin: 2rem auto 0;
+    padding-top: 0.5rem;
+  }
+  

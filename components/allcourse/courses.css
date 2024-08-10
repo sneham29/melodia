@@ -1,0 +1,295 @@
+/* General Styles */
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f4f7f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.coursesCard {
+  padding: 50px 0;
+  background-color: #f4f7f9;
+}
+
+.coursesCard .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.coursesCard .items {
+  background: linear-gradient(to bottom right, #0d4fc1b2, #f4fce0);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  background-color: #00246B; /* Inner card color */
+  color: #ffffff; /* Text color for contrast */
+}
+
+.coursesCard .items::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.coursesCard .items:hover::before {
+  opacity: 1;
+}
+
+.coursesCard .items:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.coursesCard .content {
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+
+.coursesCard .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #0169c5; /* Primary color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.coursesCard .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coursesCard .text {
+  flex: 1;
+}
+
+.coursesCard .text h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff; /* Text color for contrast */
+  margin: 0;
+  transition: color 0.3s;
+  
+}
+
+.coursesCard .text h1:hover {
+  color: #00246B; /* Hover color */
+}
+
+.coursesCard .rate {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #f7fb13; /* Primary color */
+}
+
+.coursesCard .rate i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.coursesCard .rate label {
+  font-size: 14px;
+  color: #ae1919; /* Lighter text color */
+  margin-left: 5px;
+}
+
+.coursesCard .details {
+  margin-top: 15px;
+}
+
+.coursesCard .details .box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.coursesCard .details .dimg {
+  margin-right: 15px;
+}
+
+.coursesCard .details .dimg img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.coursesCard .details .para h4 {
+  font-size: 14px;
+  color: #ffffff; /* Text color for contrast */
+  margin: 0;
+}
+
+.coursesCard .details span {
+  font-size: 14px;
+  color: #735DA5; /* Primary color */
+  font-weight: 500;
+}
+
+.coursesCard .price {
+  background-color: #00246B; /* Inner card color */
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: #ffffff; /* Text color for contrast */
+}
+
+.coursesCard .price h3 {
+  font-size: 20px;
+  color: #ffffff; /* Text color for contrast */
+  margin: 0;
+}
+
+/* Outline Button Styling */
+/* Outline Button Styling */
+.coursesCard .outline-btn {
+  border: 2px solid #007bff; /* Primary lighter blue */
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #007bff; /* Matching primary blue color */
+  background: none;
+  border-radius: 5px;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.coursesCard .outline-btn:hover {
+  background-color: #66b2ff; /* Lighter blue for hover effect */
+  color: #fff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); /* Enhanced shadow */
+}
+
+
+/* Online Section */
+.online {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #e3f2fd; /* Light blue background color */
+  padding: 50px 0; /* Padding for top and bottom */
+}
+
+.online .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.online .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px; /* Space between heading and cards */
+}
+
+.online .box {
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  background-color: #fff; /* White background for the cards */
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 10px; /* Add border-radius for a smoother look */
+  max-width: 400px; /* Ensure it aligns well with the courses card */
+  margin: 0 auto; /* Center align the box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.online .img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  position: relative;
+}
+
+.online img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Make the image circular */
+}
+
+.online h1 {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 30px;
+  color: #1a237e; /* Deep blue color */
+}
+
+.online span {
+  background-color: #bbdefb; /* Light blue color */
+  padding: 5px 20px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1a237e; /* Deep blue color */
+  border-radius: 5px;
+}
+
+.online .box .show {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.online .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px -2px rgb(0 0 0 / 20%);
+  background-color: #1a237e; /* Deep blue color */
+  cursor: pointer;
+}
+
+.online .box:hover .show {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.online .box:hover h1,
+.online .box:hover span {
+  color: #fff; /* White color for text on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .online .content {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .online .content {
+    grid-template-columns: 1fr; /* 1 card per row on smaller screens */
+  }
+}

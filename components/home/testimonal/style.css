@@ -1,0 +1,125 @@
+.testimonal {
+  padding: 50px 0;
+  background-color: #e0f7fa; /* Light blue background for the section */
+  text-align: center; /* Center align the heading */
+}
+
+.testimonal .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content */
+}
+
+.testimonal .heading {
+  margin-bottom: 30px; /* Space between heading and cards */
+}
+
+.testimonal .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center; /* Center align the cards */
+}
+
+.testimonal .items {
+  padding: 30px;
+  background-color: #ffffff; /* White background for the cards */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s, color 0.5s, transform 0.5s, box-shadow 0.5s;
+  flex: 1 1 calc(33.333% - 30px);
+  max-width: 300px;
+  text-align: center; /* Center align text within each item */
+  position: relative; /* Needed for positioning icon */
+  animation: fadeIn 1s ease-out; /* Add animation for fade-in effect */
+}
+
+.testimonal .img {
+  position: relative;
+  margin-bottom: 15px;
+  animation: zoomIn 1s ease-out; /* Add animation for zoom effect */
+}
+
+.testimonal img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.testimonal i {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bb5; /* Blue background for the quote icon */
+  color: #ffffff; /* White color for the quote icon text */
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.testimonal .name {
+  margin: 25px 0;
+}
+
+.testimonal .name h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.testimonal .name span {
+  color: #007bb5; /* Blue color for the name post */
+}
+
+.testimonal p {
+  margin-top: 20px;
+  color: #333333; /* Dark grey for the text */
+  transition: color 0.5s;
+}
+
+.testimonal .items:hover {
+  background-color: #007bb5; /* Blue background on hover */
+  color: #ffffff; /* White text on hover */
+  cursor: pointer;
+  transform: scale(1.05); /* Add scale effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+.testimonal .items:hover span,
+.testimonal .items:hover p {
+  color: #ffffff; /* White text color on hover */
+}
+
+.testimonal .items:hover i {
+  background-color: #ffffff; /* White background for the icon on hover */
+  color: #007bb5; /* Blue color for the icon text on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonal .items {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    max-width: 100%;
+  }
+}

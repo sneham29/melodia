@@ -1,0 +1,200 @@
+/* Reset and Base Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+/* Newsletter Styles */
+.newsletter {
+  background: linear-gradient(135deg, #005f87, #007bb5); /* Gradient background */
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+  position: relative; /* For the pseudo-element */
+}
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Subtle overlay for added depth */
+  z-index: 0; /* Behind content */
+}
+
+.newsletter .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content */
+  position: relative; /* To keep content above pseudo-element */
+  z-index: 1;
+}
+
+.newsletter h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px; /* Add letter spacing for a fancier look */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.newsletter span {
+  display: block;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.newsletter .input-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Increased width and added max-width */
+  margin: 0 auto; /* Center the container */
+}
+
+.newsletter input {
+  width: calc(100% - 50px); /* Adjusted width to account for button */
+  padding: 15px;
+  border: 2px solid #005f87; /* Blue border */
+  outline: none;
+  border-radius: 30px; /* More rounded corners */
+  background-color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition on focus */
+}
+
+.newsletter input:focus {
+  border-color: #1e90ff; /* Lighter blue border on focus */
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.5); /* Light blue shadow on focus */
+}
+
+.send-btn {
+  background: linear-gradient(135deg, #007bb5, #1e90ff); /* Gradient background */
+  color: #fff;
+  padding: 4px; /* Smaller padding */
+  border: none;
+  border-radius: 50%; /* Fully rounded */
+  cursor: pointer;
+  font-size: 20px; /* Adjusted font size */
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin-top: 15px; /* Move button down below input */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Center icon within button */
+  width: 40px; /* Adjusted width */
+  height: 40px; /* Adjusted height */
+}
+
+.send-btn:hover {
+  background: linear-gradient(135deg, #1e90ff, #007bb5);
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.send-btn i {
+  font-size: 20px; /* Icon size */
+  color: #fff;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #003366, #004a7c); /* Gradient background */
+  padding: 50px 0;
+  color: #fff;
+  position: relative; /* For the pseudo-element */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Subtle overlay for added depth */
+  z-index: 0; /* Behind content */
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  position: relative; /* To keep content above pseudo-element */
+  z-index: 1;
+}
+
+footer .footer-section {
+  text-align: center;
+}
+
+footer h3 {
+  margin-bottom: 20px;
+  font-weight: 700; /* Bold font weight */
+  color: #fff;
+  font-size: 24px; /* Slightly larger font size */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+footer ul li {
+  margin-bottom: 15px;
+  list-style: none;
+  color: #e0e0e0; /* Light grey text color */
+}
+
+footer ul li a {
+  color: #e0e0e0; /* Light grey text color for links */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth transition on hover */
+}
+
+footer ul li a:hover {
+  color: #1e90ff; /* Blue color for links on hover */
+  text-decoration: underline;
+}
+
+footer p {
+  color: #e0e0e0; /* Light grey color for footer text */
+}
+
+footer i {
+  margin-right: 10px;
+}
+
+.social-media {
+  margin-top: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.social-icon:hover {
+  color: #1e90ff; /* Blue color on hover */
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.legal {
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  background: linear-gradient(135deg, #007bb5, #005f87); /* Gradient background */
+  border-top: 5px solid #003366; /* Darker blue border */
+}
+
+.legal p {
+  font-size: 14px;
+  margin: 0;
+}

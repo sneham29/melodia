@@ -1,0 +1,207 @@
+/* Global Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+/* Price Section */
+.price {
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.price h1 {
+  font-size: 50px;
+  margin: 20px 0;
+  color: #095d96;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  text-align: center; /* Center align the heading */
+}
+
+.price h1 span {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #cbd5e0;
+}
+
+.price p {
+  color: #e2e8f0;
+  margin: 40px 0;
+  font-size: 18px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  text-align: center; /* Center align the paragraph */
+}
+
+.price .items-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 20px; /* Space between cards */
+  justify-items: center; /* Center items within grid cells */
+}
+
+.price .items {
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2b6cb0 100%);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  text-align: center; /* Center align text inside card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Space between items to push button to bottom */
+  min-height: 300px; /* Ensure cards have consistent height */
+}
+
+.price .items h4 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.price .items h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.price .items p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.outline-btn {
+  background: #007bb5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: auto; /* Push button to bottom of the card */
+}
+
+.outline-btn:hover {
+  background: #005f87;
+  transform: scale(1.05);
+}
+
+
+
+/* FAQ Styles */
+.faq {
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.faq .container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.faq .box {
+  background-color: #e3f2fd;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-align: center; /* Center text inside the box */
+}
+
+.faq .box:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+}
+
+.faq button {
+  padding: 15px 20px;
+  background-color: #e3f2fd;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border-bottom: 2px solid #1a237e;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Aligns the icon to the right */
+  align-items: center; /* Centers items vertically */
+}
+
+.faq button:hover {
+  background-color: #1a237e;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.faq h2 {
+  font-weight: 600;
+  margin: 0;
+  color: #606cf8;
+  font-size: 18px;
+  text-align: center; /* Center the heading text */
+}
+
+.faq p {
+  padding: 20px;
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Accordion Icon */
+.faq .accordion::after {
+  content: '\f107'; /* Font Awesome down arrow */
+  font-family: 'Font Awesome 5 Free'; /* Ensure FontAwesome is loaded */
+  font-weight: 900; /* Bold icon for better visibility */
+  font-size: 20px;
+  color: #1a237e;
+  transition: transform 0.3s ease;
+  display: inline-block; /* Ensure icon is inline */
+}
+
+.faq .accordion.collapsed::after {
+  content: '\f106'; /* Font Awesome up arrow */
+  transform: rotate(180deg);
+}
+
+/* Accordion content animation */
+.faq .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 20px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.faq .accordion-content.show {
+  max-height: 500px;
+  opacity: 1;
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faq .container {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,37 @@
+.hero {
+  background-image: url("../../../../public/images/newback1.jpg"); /* Updated path */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed during scroll */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text alignment */
+  color: #fff;
+  padding: 0; /* Remove padding if you want the image to cover the full page without any offset */
+  margin: 0; /* Ensure no margin affects the hero section */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero {
+    background-size: cover; /* Ensure the image covers the section on smaller screens */
+    background-position: center; /* Keep the image centered */
+    height: 80vh; /* Adjust height for smaller screens */
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+  .hero .row {
+    width: 100%;
+    align-items: center; /* Center alignment on smaller screens */
+  }
+  .hero h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .hero h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}

@@ -1,0 +1,44 @@
+.admin-profile-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.admin-heading {
+    font-size: 24px;
+    color: #333;
+}
+
+.admin-info-card,
+.admin-managed-staff-card,
+.admin-announcements-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.admin-info-card h2,
+.admin-managed-staff-card h2,
+.admin-announcements-card h2 {
+    font-size: 20px;
+    color: #444;
+}
+
+.admin-info-card p,
+.admin-managed-staff-card ul,
+.admin-announcements-card ul {
+    font-size: 16px;
+    color: #666;
+}
+
+.admin-managed-staff-card ul,
+.admin-announcements-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admin-managed-staff-card li,
+.admin-announcements-card li {
+    padding: 5px 0;
+}
